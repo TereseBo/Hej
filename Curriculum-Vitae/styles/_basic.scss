@@ -1,0 +1,23 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+body{
+ background: v.$primary-bg-color;
+ color: v.$primary-text-color;
+ font-size: medium;
+ box-sizing: border-box;
+ display:flex;
+ flex-direction: column;
+    align-items: center;
+ 
+}
+h1, h2, h3, h4, h5, h6{
+ color: v.$secondary-text-color;
+ 
+}
+h2, h3, h4, h5, h6{
+ font-weight: lighter;
+}
+
+
+
+

@@ -1,0 +1,47 @@
+@use '_variables' as v;
+
+@mixin rounded-corners($radius: 10px){
+    border-radius: $radius;
+}
+
+
+
+@mixin flip{
+
+
+}
+
+@mixin nav{
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        margin: auto;
+    }
+    & li{
+        padding: 1rem;
+        background: v.$secondary-bg-color;
+        @include rounded-corners;
+
+        &:hover{
+            //color: v.$quinary-text-color;
+            background-color: v.$quaternary-bg-color;
+            transform: scale(1.2);
+            transition: 0.5s;
+            & a{
+                color: v.$quinary-text-color;
+                font-weight: 700;
+            }
+        }
+        
+        & a{
+            text-decoration: none;
+            color: v.$tertiary-text-color;
+        }
+
+    }
+
+}
